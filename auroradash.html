@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Dashboard</title>
+  <link rel="stylesheet" href="sty.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Aurora Dashboard</h1>
+    <nav>
+      <a href="#">Overview</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="dashboard">
+    <!-- Stats Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Users</h3>
+        <p class="stat">12,480</p>
+        <span class="trend up">+12%</span>
+      </div>
+      <div class="card">
+        <h3>Sales</h3>
+        <p class="stat">$34,200</p>
+        <span class="trend up">+8%</span>
+      </div>
+      <div class="card">
+        <h3>Bounce Rate</h3>
+        <p class="stat">24%</p>
+        <span class="trend down">-3%</span>
+      </div>
+      <div class="card">
+        <h3>New Orders</h3>
+        <p class="stat">1,320</p>
+        <span class="trend up">+5%</span>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts">
+      <div class="chart-card">
+        <h3>Users Growth</h3>
+        <canvas id="usersChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Sales Overview</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="table-section">
+      <h3>Recent Activity</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Action</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>Signed up</td>
+            <td>2 min ago</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>Purchased Pro Plan</td>
+            <td>15 min ago</td>
+          </tr>
+          <tr>
+            <td>Clara</td>
+            <td>Uploaded Files</td>
+            <td>1 hour ago</td>
+          </tr>
+          <tr>
+            <td>David</td>
+            <td>Updated Profile</td>
+            <td>3 hours ago</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

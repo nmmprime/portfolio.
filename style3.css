@@ -1,0 +1,100 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { height: 100%; font-family: "Inter", sans-serif; }
+
+/* Background */
+body {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  padding: 1rem;
+}
+
+/* Container */
+.signup-container {
+  width: 100%; max-width: 400px;
+}
+
+/* Form */
+.signup-form {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 0.6s ease;
+}
+.signup-form h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels & Inputs */
+.signup-form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  display: block;
+}
+.signup-form input {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.signup-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* Button */
+.signup-form button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.signup-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Alternative */
+.alt {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  color: #4b5563;
+}
+.alt a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+.alt a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

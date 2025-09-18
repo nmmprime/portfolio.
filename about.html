@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nabit Mohommod Maayaz — About</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Custom premium cursor */
+      html, body { cursor: none; }
+      .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #6366F1;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, border 0.2s ease;
+      }
+      .cursor--hover {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
+        border-color: #3b82f6;
+      }
+      .cursor--click {
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-800 antialiased">
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold text-indigo-600" href="#">Nabit Mohommod Maayaz</a>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900">About Me</h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">I’m Nabit Mohommod Maayaz, a passionate frontend developer and designer. Even with just a short time in the industry, I aim to craft high-end websites and applications that look stunning and perform seamlessly.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Image side -->
+          <div class="relative">
+            <img src="1234.png" class="rounded-2xl shadow-lg">
+            <div class="absolute -bottom-6 -right-6 bg-indigo-600 text-white p-4 rounded-xl shadow-lg">
+              <p class="font-semibold text-lg">2 Months</p>
+              <p class="text-sm">Experience</p>
+            </div>
+          </div>
+
+          <!-- Text side -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Who I Am</h2>
+            <p class="text-gray-600 mb-4">I’m a creative technologist who bridges the gap between design and engineering. My mission is to deliver polished digital products with excellent usability, speed, and accessibility. I am working toward building expertise in <strong>TailwindCSS</strong> and <strong>Bootstrap</strong>.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-indigo-600">✔</span>
+                <span>Currently gaining strong skills in <strong>TailwindCSS and Bootstrap</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-indigo-600">✔</span>
+                <span>Focused on <strong>UI/UX design</strong> and modern design systems</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-indigo-600">✔</span>
+                <span>Aiming to deliver <strong>500+ projects</strong> in the future</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-indigo-600">✔</span>
+                <span>Already served <strong>2 clients</strong> with growing satisfaction</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 flex gap-4">
+              <a href="#" class="px-5 py-3 rounded-lg bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700">Download CV</a>
+              <a href="#" class="px-5 py-3 rounded-lg border border-gray-300 text-gray-700 font-medium hover:bg-gray-100">Hire Me</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra section for premium feel -->
+        <div class="mt-20 grid md:grid-cols-3 gap-8 text-center">
+          <div class="p-8 bg-white rounded-2xl shadow hover:shadow-xl transition">
+            <h3 class="text-3xl font-extrabold text-indigo-600">500+</h3>
+            <p class="mt-2 text-gray-600">Projects To Deliver</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl shadow hover:shadow-xl transition">
+            <h3 class="text-3xl font-extrabold text-indigo-600">2</h3>
+            <p class="mt-2 text-gray-600">Clients Served</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl shadow hover:shadow-xl transition">
+            <h3 class="text-3xl font-extrabold text-indigo-600">2 Months</h3>
+            <p class="mt-2 text-gray-600">Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-600">© <span id="year"></span> Nabit Mohommod Maayaz. Premium About Page built with Bootstrap & Tailwind.</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const cursor = document.getElementById('cursor');
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let cursorX = mouseX;
+      let cursorY = mouseY;
+      window.addEventListener('pointermove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        const target = e.target;
+        const interactive = target.closest && (target.closest('a, button, input, textarea, select, label, .btn'));
+        if (interactive) cursor.classList.add('cursor--hover'); else cursor.classList.remove('cursor--hover');
+      });
+      window.addEventListener('pointerdown', () => {
+        cursor.classList.add('cursor--click');
+      });
+      window.addEventListener('pointerup', () => {
+        cursor.classList.remove('cursor--click');
+      });
+      function render() {
+        cursorX += (mouseX - cursorX) * 0.18;
+        cursorY += (mouseY - cursorY) * 0.18;
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+        requestAnimationFrame(render);
+      }
+      requestAnimationFrame(render);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio CMS</title>
+  <link rel="stylesheet" href="styl.css">
+  <script src="script1.js" defer></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">Portfolio CMS</h2>
+    <nav>
+      <a href="#" class="active" data-section="dashboard">Dashboard</a>
+      <a href="#" data-section="projects">Projects</a>
+      <a href="#" data-section="media">Media</a>
+      <a href="#" data-section="settings">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section active">
+      <h1>Welcome to your CMS</h1>
+      <p>Use the sidebar to manage your portfolio projects, media, and settings.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section hidden">
+      <header class="header">
+        <h1>Projects</h1>
+        <button id="addProjectBtn">+ Add Project</button>
+      </header>
+
+      <!-- Project Modal -->
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+          <h2>Add Project</h2>
+          <form id="projectForm">
+            <label>Title</label>
+            <input type="text" name="title" required>
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+            <label>Tech Stack</label>
+            <input type="text" name="tech" required>
+            <div class="modal-actions">
+              <button type="submit">Save</button>
+              <button type="button" id="closeModal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Projects Table -->
+      <table id="projectsTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Tech</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="section hidden">
+      <header class="header">
+        <h1>Media</h1>
+        <label class="upload-btn">
+          + Upload
+          <input type="file" id="mediaUpload" multiple hidden>
+        </label>
+      </header>
+      <div id="mediaGrid" class="media-grid"></div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section hidden">
+      <h1>Settings</h1>
+      <form id="settingsForm" class="settings-form">
+        <label>Site Title</label>
+        <input type="text" name="siteTitle" placeholder="My Portfolio">
+
+        <label>Tagline</label>
+        <input type="text" name="tagline" placeholder="Creative Developer">
+
+        <label>Theme Color</label>
+        <input type="color" name="themeColor" value="#2563eb">
+
+        <button type="submit">Save Settings</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
