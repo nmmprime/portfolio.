@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopWave Preview</title>
+  <link rel="stylesheet" href="style1.css">
+  <script src="script2.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">ShopWave</h1>
+    <button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <!-- Product Grid -->
+  <main class="products">
+    <div class="product-card">
+      <img src="https://picsum.photos/300/200?random=1" alt="Product">
+      <h3>Wireless Headphones</h3>
+      <p class="price">$120</p>
+      <button class="add-to-cart" data-name="Wireless Headphones" data-price="120">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/300/200?random=2" alt="Product">
+      <h3>Smartwatch Pro</h3>
+      <p class="price">$199</p>
+      <button class="add-to-cart" data-name="Smartwatch Pro" data-price="199">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/300/200?random=3" alt="Product">
+      <h3>Portable Speaker</h3>
+      <p class="price">$89</p>
+      <button class="add-to-cart" data-name="Portable Speaker" data-price="89">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://picsum.photos/300/200?random=4" alt="Product">
+      <h3>Gaming Mouse</h3>
+      <p class="price">$59</p>
+      <button class="add-to-cart" data-name="Gaming Mouse" data-price="59">Add to Cart</button>
+    </div>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart hidden">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <div class="cart-footer">
+      <p>Total: $<span id="cartTotal">0</span></p>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+</body>
+</html>
